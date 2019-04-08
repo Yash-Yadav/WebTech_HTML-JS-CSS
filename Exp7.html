@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JS Functions</title>
+<script>
+	
+</script>
+</head>
+<body onload='whileLoop()'>
+<p id="demo1" style='float:left'>While Loop&emsp;&emsp;&emsp;</p>
+<script>
+	var i=1;
+	while(i<=5)
+		{
+			var para = document.createElement("p");
+			var node = document.createTextNode(i);
+			para.appendChild(node);
+			var element = document.getElementById("demo1");
+			element.appendChild(para);
+			i=i+1;
+		}
+</script>
+
+<p id="demo2" style='float:left'>do While Loop&emsp;&emsp;&emsp;</p>
+<script>
+	var i=1;
+	do
+		{
+			var para = document.createElement("p");
+			var node = document.createTextNode(i);
+			para.appendChild(node);
+			var element = document.getElementById("demo2");
+			element.appendChild(para);
+			i=i+1;
+		}while(i<=5);
+</script>
+
+<p id="demo3" style='float:left'>For Loop</p>
+<script>
+	for(var i=1; i<=5; i++)
+		{
+			var para = document.createElement("p");
+			var node = document.createTextNode(i);
+			para.appendChild(node);
+			var element = document.getElementById("demo3");
+			element.appendChild(para);
+		}
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JS Functions</title>
+<script>
+	function valid(form)
+	{
+		var text = form.Name.value;
+		alert("Hello " + text + " ! Welcome...");
+	}
+	function sample()
+	{
+		document.body.style.backgroundColor = "red";
+	}
+</script>
+</head>
+<body>
+<form>
+	<input type="text" name="Name" onFocus='document.body.style.backgroundColor = "red";'>
+	<input type="button" value="Click Here" onClick="valid(this.form)">
+</form>
+<img src="http://admissionspark.com/img/apple-touch-icon.png" onabort='alert("You stopped the loading the image!")' width=100px>
+
+
+</body>
+</html>

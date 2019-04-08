@@ -1,0 +1,205 @@
+<HTML>
+<HEAD>
+<title>Registration Form</title>
+<meta viewport="viewport" content="width-device-width, initial-scale=1.0">
+<script type="text/javascript">
+	function validateForm()
+	{
+		var phoneno = document.forms["myForm"]["sMob"].value;
+		var template= /^\d{10}$/;
+		if (!template.test(phoneno))
+		{
+			alert("Please Enter a Valit 10 Digit Mobile Number");
+		}
+		else
+			alert("Form Successfully Validated");
+	}
+</script>
+
+<STYLE>
+*{
+  font-family: Georgia;
+}
+
+body{
+  background: linear-gradient(45deg, #00dbde, #fc00ff);
+}
+.formContainer {
+  border-radius: 20px;
+	background-color: white;
+  //background: linear-gradient(45deg, #00dbde, #fc00ff);
+  padding: 1% 4% 1% 4%;
+	max-width:400px;
+  margin-left: auto;
+  margin-right: auto;	
+}
+.row{
+  margin-top: 10px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 10px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+h1, h2{
+text-align:center;}
+
+img{
+	width: 40%;
+	height:auto;
+	display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+input[type=text],[type=date], [type=email], [type=mobile],[type=number], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px;
+  display: inline-block;
+  border: none; //1px solid gray;
+  border-radius: 15px;
+  box-sizing: border-box;
+	color:white;
+	background: linear-gradient(-45deg, #00dbde, #fc00ff);
+	transition: all 0.5s;
+}
+select:focus,input:focus {
+  box-shadow: 0 0 10px white;
+  border: 2px solid white;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+ color: white;
+}
+input[type=radio],[type=checkbox] {
+  display: inline-block;
+}
+input[type=submit] {
+  width: 100%;
+  //background-color: #4CAF50;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+	background: linear-gradient(-45deg, #00dbde, #fc00ff);
+	transition: all 0.5s;
+}
+input:hover {
+	background: linear-gradient(45deg, #00dbde, #fc00ff);
+}
+
+/* Responsive layout - when the screen is less than
+720px wide, make the two columns stack on top of
+each other instead of next to each other */
+@media screen and (max-width: 720px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+</STYLE>
+</HEAD>
+
+<BODY>
+<div class="formContainer">
+	<form name="myForm" onsubmit="return validateForm()">
+		<h1>Registration Form </h1>
+		
+<!--===============Photo====================-->		
+		<IMG SRC="logo.png">
+		
+<!--===============Student Details====================-->
+		<h2>Student Details</h2>
+		<div class="StudDetails">
+			<div class="row">
+				<div class="col-25">
+					<label>First Name:</label>
+				</div>
+				<div class="col-75">
+					<input id="fName" type="text" name="fname" placeholder="Student's First Name">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-25">
+					<label>Last Name:</label>
+				</div>
+				<div class="col-75">
+					<input id="lName" type="text" name="lname" placeholder="Student's Last Name">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-25">
+					<label>Gender:</label>
+				</div>
+				<div class="col-25">
+					<label><input id="gender" type="radio" name="gender" value="male">Male</label>
+				</div>
+				<div class="col-25">
+					<label><input id="gender" type="radio" name="gender" value="female">Female</label>
+				</div>
+				<div class="col-25">
+					<label><input id="gender" type="radio" name="gender" value="other">Other</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-25">
+					<label>Email:</label>
+				</div>
+				<div class="col-75">
+					<input id="sEmail" type="email" name="sEmail" placeholder="Student's E-Mail Address">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-25">
+					<label>Mobile:</label>
+				</div>
+				<div class="col-75">
+					<input id="sMob" type="mobile" name="sMob" placeholder="Student's Mobile Number"></td>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-25">
+					<label>Semester:</label>
+				</div>
+				<div class="col-75">
+					<select name="course">
+						<option value="1">Semester 1</option>
+						<option value="2">Semester 2</option>
+						<option value="3">Semester 3</option>
+						<option value="4">Semester 4</option>
+						<option value="5">Semester 5</option>
+						<option value="6">Semester 6</option>
+						<option value="7">Semester 7</option>
+						<option value="8">Semester 8</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<br><br>
+		<div class="row">
+				<input type="submit" name="submit" value="SUBMIT">
+			</div>
+		
+	</form>
+</div>
+</BODY>
+</HTML>
